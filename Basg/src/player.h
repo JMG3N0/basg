@@ -14,13 +14,14 @@ namespace basg
 		int width;
 		int score;
 		int team;
-		int number;
+		float speed;
 		bool isAlive;
 	};
 
-	Player set(Player& player, int number, int team, bool isAlive);
+	Player set(Player& player, int team, bool isAlive);
 	Player reset(Player& player);
-	Player update(Player& player);
-	bool collisionPB(Player P, Ball B);
+	Player update(Player& player, Ball b);
 	void draw(Player player);
+	bool collisionPB(Player P, Ball B);
+
 }

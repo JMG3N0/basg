@@ -6,17 +6,21 @@ namespace basg
 {
 	struct Ball
 	{
-		Texture2D basketball;
+		//Texture2D basketball;
 		Vector2 initPosition;
 		Vector2 position;
+		Vector2 speed;
 		int width;
 		int height;
-		int radius;
-		Vector2 speed;
+		float radius;
+		int cap;
+		int lastTouch;
+		float pivot;
 	};
 
-	Ball set(Ball& ball, int screenType);
+	Ball set(Ball& ball);
 	Ball reset(Ball& ball);
-	Ball update(Ball& ball, bool changeDirection, Vector2 directionChanger, bool changeSpeed, int speedChanger);
+	Ball update(Ball& ball, bool changeDirection, Vector2 directionChanger, bool changeSpeed);
 	void draw(Ball ball);
+	
 }
